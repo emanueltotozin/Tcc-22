@@ -418,6 +418,13 @@ background-image: url(../images/banner-bg.png);*/
     margin-left: 30px;
     order: 2;
 }
+.dropdown_product {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+    order: 2;
+}
 
 .btn-secondary {
     color: #fff;
@@ -619,6 +626,12 @@ a:hover {
     font-weight: bold;
 }
 
+.fashion_product {
+    width: 100%;
+    color: #30302e;
+    font-weight: bold;
+}
+
 .fashion_section_2 {
     width: 100%;
     margin-top: 30px;
@@ -656,6 +669,14 @@ a:hover {
     margin: 50px 0px;
     min-height: 370px;
 }
+
+.tshirt_img_product {
+    width: 100%;
+    text-align: left;
+    margin: 50px 0px;
+    min-height: 370px;
+}
+
 
 .btn_main {
     width: 100%;
