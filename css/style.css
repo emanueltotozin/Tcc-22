@@ -1023,5 +1023,10 @@ input.mail_bt::placeholder {
     width: 80%;
 }
 
+.icon_carrinho{
+    width: 60px;
+    margin:0px;
+}
+
 
 /* copyright section end */

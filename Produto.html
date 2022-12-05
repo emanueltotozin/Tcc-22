@@ -67,7 +67,7 @@
                     </div>
                     <div class="login_menu">
                        <ul>
-                          <li><a href="#">
+                          <li><a href="Carrinho.html">
                              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                              <span class="padding_10">Carrinho</span></a>
                           </li>
@@ -97,18 +97,14 @@
            <br><br>
            <a class="price_text">Cor: Amarela</a>
            <br>
-           <div class="dropdown_product pt-5">
-
-            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Tamanho
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton ">
-              <a class="dropdown-item" >P</a>
-              <a class="dropdown-item" >M</a>
-              <a class="dropdown-item" >G</a>
-              <a class="dropdown-item" >GG</a>
-            </div>
-         </div>
+           <select class="form-control" id="exampleFormControlSelect1">
+            <option value="" disabled selected>Selcione um tamanho</option>
+            <option value="P">P</option>
+            <option>M</option>
+            <option>G</option>
+            <option>GG</option>
+            <option>XG</option>
+          </select>
          <hr>
       
          <div class="accordion" id="accordionExample">
@@ -127,7 +123,7 @@
               </div>
             </div>
             <br><br>
-            <button type="button" class="btn btn-success">Comprar</button>
+            <a class="btn btn-success" href="Carrinho.html" role="button">Comprar</a>
             <hr>
             <h4> Calcule seu Frete </h4>
             <div class="input-group mb-3">
