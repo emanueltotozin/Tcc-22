@@ -45,7 +45,7 @@ body {
   /* Style the navbar links */
   #navbar a {
     float: left;
-    color: black;
+    color: blue;
     text-align: center;
     padding: 12px;
     text-decoration: none;
@@ -66,6 +66,7 @@ body {
     background-color: #ddd;
     color: black;
   }
+
   
   /* Style the active/current link */
   #navbar a.active {
@@ -560,6 +561,7 @@ a:hover {
     padding-top: 30px;
 }
 
+
 .buynow_bt a {
     width: 100%;
     float: left;
@@ -1027,6 +1029,18 @@ input.mail_bt::placeholder {
     width: 60px;
     margin:0px;
 }
-
+.imgcart{
+    width: 50%;
+}
 
 /* copyright section end */
+a.nomeloja{
+    color: white;
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
