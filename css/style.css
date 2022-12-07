@@ -11,7 +11,12 @@
 @import url(nice-select.css);
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
-
+@font-face {
+    font-family:'open';
+    src: url('OpenSans-Light.ttf') format('truetype');
+    font-weight:normal;
+    font-style: normal;
+}
 * {
     box-sizing: border-box !important;
     transition: ease all 0.5s;
@@ -547,6 +552,7 @@ a:hover {
 }
 
 .banner_taital {
+    font-family:'open', Times, serif;
     width: 100%;
     font-size: 60px;
     color: #ffffff;
@@ -1032,9 +1038,8 @@ input.mail_bt::placeholder {
 .imgcart{
     width: 50%;
 }
-
-/* copyright section end */
 a.nomeloja{
+    font-family:'open', Times, serif;
     color: white;
     text-decoration: none !important;
     outline: none !important;
