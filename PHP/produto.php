@@ -49,69 +49,71 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Produtos</title>
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(90deg, rgb(255, 136, 0), rgb(131, 4, 4));
-        }
 
-        .box {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: black;
-            padding: 15px;
-            border-radius: 15px;
-            width: 28%;
-            color: black;
-        }
+            
+       
+    input[type=text], select, textarea{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        resize: vertical;
+    }
 
-        fieldset {
-            border: 3px solid red;
-        }
 
-        legend {
-            border: 1px solid red;
-            padding: 10px;
-            text-align: center;
-            background-image: linear-gradient(45deg, orange, red);
-            border-radius: 8px;
-            color: white;
-        }
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
 
-        .inputBox {
-            position: relative;
-            color: black;
-        }
 
-        .inputUser {
-            border: none;
-            background-color: whitesmoke;
-            border-radius: 5px;
-            border-bottom: 1px solid whitesmoke;
-            outline: none;
-            color: black;
-            font-size: 15px;
-            width: 100%;
-        }
+    input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
 
-        .labelInput {
-            position: relative;
-            top: 5px;
-            left: 0px;
-            color: white;
-        }
 
-        #submit {
-            background-image: linear-gradient(45deg, orange, red);
-            width: 100%;
-            border: none;
-            padding: 15px;
-            color: white;
-            font-size: 15px;
-            cursor: pointer;
-            border-radius: 10px;
-        }
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
     </style>
 </head>
 
@@ -119,46 +121,61 @@ if (isset($_POST['submit'])) {
     <!--<a href="home.php">Voltar</a>-->
     <div class="box">
         <form action="produto.php" method="POST">
-            <fieldset>
-                <legend><b>Cadastro de Produtos</b></legend>
+                <h2>Cadastro de Produtos</h2>
                 <br>
-                <div class="inputBox">
-                    <input type="text" name="nomeprod" id="nomeprod" class="inputUser" required>
-                    <label for="nomeprod" class="labelInput">Nome</label>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-25">
+                <label for="nomeprod" class="labelInput">Nome</label>
+                        </div>
+                    <div class="col-75">
+                <input type="text" name="nomeprod" id="nomeprod" class="inputUser" required placeholder="Nome do Produto">
+                    </div>
                 </div>
+                
 
-                <br><br>
+                    <div class="row">
+                        <div class="col-25">
+                <label for="idprod" class="labelInput">Código</label>
+                        </div>
+                        <div class="col-75">
+                <input type="text" name="idprod" id="idprod" class="inputUser" required placeholder="Codigo do Produto">
+                        </div>
+                    </div>
+                
 
-                <div class="inputBox">
-                    <input type="text" name="idprod" id="idprod" class="inputUser" required>
-                    <label for="idprod" class="labelInput">Código</label>
-                </div>
-
-                <br><br>
-
-                <div class="inputBox">
-                <input type="text" name="descricaoprod" id="descricaoprod" class="inputUser" required>
+                    <div class="row">
+                        <div class="col-25">
                 <label for="descricaoprod" class="labelInput">Descrição do Produto</label>
-                </div>
+                        </div>
+                        <div class="col-75">
+                <textarea type="text" name="descricaoprod" id="descricaoprod" class="inputUser"  placeholder="Mais informações do produto" required style="height:200px"></textarea>
+                        </div>
+                    </div>
+                
 
-                <br><br>
+                    <div class="row">
+                        <div class="col-25">
+                <label for="preco" class="labelInput">Preço</label>
+                        </div>
+                        <div class="col-75">
+                <input type="text" name="preco" id="preco" class="inputUser" required placeholder="Coloque ''R$''">
+                        </div>
+                    </div>
+            
 
-                <div class="inputBox">
-                    <input type="text" name="preco" id="preco" class="inputUser" required>
-                    <label for="preco" class="labelInput">Preço</label>
-                </div>
-
-                <br><br>
-
-                <div class="inputBox">
-                    <input type="text" name="estoque" id="estoque" class="inputUser" required>
-                    <label for="estoque" class="labelInput">Estoque Disponível</label>
-                </div>
-
-                <br><br>
-
+                    <div class="row">
+                        <div class="col-25">
+                <label for="estoque" class="labelInput">Estoque Disponível</label>
+                        </div>
+                        <div class="col-75">
+                <input type="text" name="estoque" id="estoque" class="inputUser" required placeholder="Estoque do Produto">
+                    </div>
+                        </div>
+                        <br>
+                <div class="row">
                 <input type="submit" name="submit" id="submit">
-            </fieldset>
+                </div>
         </form>
     </div>
 </body>
